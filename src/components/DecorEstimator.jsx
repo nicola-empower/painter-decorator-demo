@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-    Paintbrush, Roller, Palette, Home,
+    Paintbrush, PaintRoller, Palette, Home,
     Banknote, Calendar, Layers, CheckCircle2,
     ArrowRight, ArrowLeft, Image
 } from 'lucide-react';
@@ -78,7 +78,7 @@ const DecorEstimator = () => {
                             {[
                                 { icon: Home, label: 'Interior Rooms', value: 'interior' },
                                 { icon: Sun, label: 'Exterior Facade', value: 'exterior' }, // Need Sun imported if using
-                                { icon: Roller, label: 'Kitchen Cabinets', value: 'cabinets' },
+                                { icon: PaintRoller, label: 'Kitchen Cabinets', value: 'cabinets' },
                                 { icon: Palette, label: 'Full Property', value: 'full' }
                             ].map((opt) => (
                                 <button
