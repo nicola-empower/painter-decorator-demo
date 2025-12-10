@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import TrustBar from "../components/TrustBar.jsx";
 import Testimonials from "../components/Testimonials.jsx";
+import DecorEstimator from "../components/DecorEstimator.jsx";
 import FAQ from "../components/FAQ.jsx";
 ---
 
@@ -90,7 +91,7 @@ import FAQ from "../components/FAQ.jsx";
 
 		<div class="relative z-20 bg-white"><TrustBar client:visible /></div>
 
-        <!-- Services Preview Section -->
+		<!-- Services Preview Section -->
 		<div class="py-24 sm:py-32 bg-sky-50">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="mx-auto max-w-2xl text-center">
@@ -106,9 +107,31 @@ import FAQ from "../components/FAQ.jsx";
 				<!-- Add more content here later -->
 			</div>
 		</div>
-	<Testimonials client:visible />
-        <FAQ client:visible />
-    </main>
+
+		<!-- Decorating Quote Assistant Section -->
+		<div class="py-24 bg-white relative">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-2xl text-center mb-16">
+					<h2
+						class="text-base font-semibold leading-7 text-indigo-600"
+					>
+						Free Quote Assistant
+					</h2>
+					<p
+						class="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl"
+					>
+						Plan Your Project
+					</p>
+					<p class="mt-4 text-lg text-gray-500">
+						Get a detailed estimate by telling us a bit more about
+						your decorating needs.
+					</p>
+				</div>
+				<DecorEstimator client:visible />
+			</div>
+		</div>
+
+		<Testimonials client:visible />
+		<FAQ client:visible />
+	</main>
 </Layout>
-
-
