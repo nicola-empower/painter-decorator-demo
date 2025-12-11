@@ -3,6 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import TrustBar from "../components/TrustBar.jsx";
 import Testimonials from "../components/Testimonials.jsx";
 import DecorEstimator from "../components/DecorEstimator.jsx";
+import FeatureSection from "../components/FeatureSection.jsx";
+import ServiceAreaMap from "../components/ServiceAreaMap.jsx";
+import ProcessFlow from "../components/ProcessFlow.jsx";
+import SafetyGuarantee from "../components/SafetyGuarantee.jsx";
 import FAQ from "../components/FAQ.jsx";
 ---
 
@@ -91,20 +95,57 @@ import FAQ from "../components/FAQ.jsx";
 
 		<div class="relative z-20 bg-white"><TrustBar client:visible /></div>
 
-		<!-- Services Preview Section -->
-		<div class="py-24 sm:py-32 bg-sky-50">
+		<!-- Services Feature Section -->
+		<FeatureSection
+			client:visible
+			title="Flawless Finish"
+			subtitle="Interior & Exterior Excellence"
+			description="We treat your home with the utmost respect. Our dust-free sanding technology and premium paints ensure a showroom finish that lasts."
+			features={[
+				{
+					title: "Spray Painting",
+					desc: "Factory-finish results for kitchens and joinery.",
+				},
+				{
+					title: "Wallpaper Hanging",
+					desc: "Specialists in wide-vinyl and hand-printed papers.",
+				},
+				{
+					title: "Period Restoration",
+					desc: "Sash window painting and heritage colour matching.",
+				},
+			]}
+			imageSrc="/hero.png"
+			quote="The transformation of our hallway is incredible. Not a speck of dust left behind."
+			author="James & Sarah, Gosforth"
+			align="left"
+		/>
+
+		<ProcessFlow client:visible />
+
+		<!-- Service Area Map Section -->
+		<div class="py-24 bg-white">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-2xl text-center">
-					<h2 class="text-base font-semibold leading-7 text-paint">
-						Flawless Finish
+				<div class="mx-auto max-w-2xl text-center mb-16">
+					<h2 class="text-base font-semibold leading-7 text-accent">
+						Local Coverage
 					</h2>
 					<p
 						class="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl"
 					>
-						Interior & Exterior Excellence
+						Serving Newcastle & The North East
+					</p>
+					<p class="mt-4 text-lg text-gray-500">
+						Reliable decorators across Sunderland, Durham,
+						Gateshead, and the coast.
 					</p>
 				</div>
-				<!-- Add more content here later -->
+				<ServiceAreaMap
+					client:only="react"
+					center={[54.9783, -1.6178]}
+					city="Newcastle"
+					radiusMiles={20}
+				/>
 			</div>
 		</div>
 
@@ -132,6 +173,7 @@ import FAQ from "../components/FAQ.jsx";
 		</div>
 
 		<Testimonials client:visible />
+		<SafetyGuarantee client:visible />
 		<FAQ client:visible />
 	</main>
 </Layout>
