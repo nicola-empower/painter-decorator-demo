@@ -1,3 +1,6 @@
+import React from 'react';
+import { Wind, Brush, Home } from 'lucide-react';
+
 const defaultItems = [
     { title: "100% Dust Free", subtitle: "Advanced Extraction", icon: Wind, colorClass: "text-blue-500" },
     { title: "Dulux Select", subtitle: "Accredited Craftsmanship", icon: Brush, colorClass: "text-red-500" },
