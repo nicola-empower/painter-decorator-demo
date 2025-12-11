@@ -1,0 +1,238 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { CheckCircle, ArrowRight, Paintbrush, Home, Ruler } from "lucide-react";
+---
+
+<Layout title="Get a Quote | Chroma Decor">
+    <main class="bg-gray-50 min-h-screen">
+        <div
+            class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32"
+        >
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:mx-0">
+                    <h1
+                        class="text-4xl font-bold tracking-tight text-white sm:text-6xl font-serif"
+                    >
+                        Plan Your Project
+                    </h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-300">
+                        Tell us about your space and get a detailed estimate
+                        within 24 hours. No stress, no mess.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="mx-auto max-w-7xl px-6 lg:px-8 -mt-12 sm:-mt-24 relative z-10 pb-24"
+        >
+            <div
+                class="bg-white rounded-2xl shadow-xl p-8 sm:p-12 border border-gray-200"
+            >
+                <form class="space-y-12">
+                    <div class="border-b border-gray-900/10 pb-12">
+                        <h2
+                            class="text-base font-semibold leading-7 text-gray-900"
+                        >
+                            Project Details
+                        </h2>
+                        <p class="mt-1 text-sm leading-6 text-gray-600">
+                            Help us understand the scope of work.
+                        </p>
+
+                        <div
+                            class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6"
+                        >
+                            <div class="sm:col-span-full">
+                                <label
+                                    class="text-sm font-medium leading-6 text-gray-900 mb-4 block"
+                                    >What type of project is this?</label
+                                >
+                                <div
+                                    class="grid grid-cols-1 sm:grid-cols-3 gap-4"
+                                >
+                                    <label
+                                        class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none hover:border-blue-500 peer-checked:border-blue-600 peer-checked:ring-1 peer-checked:ring-blue-600"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="project-type"
+                                            value="kitchen"
+                                            class="sr-only peer"
+                                        />
+                                        <span class="flex flex-1">
+                                            <span class="flex flex-col">
+                                                <span
+                                                    class="block text-sm font-medium text-gray-900"
+                                                    >Kitchen Respray</span
+                                                >
+                                                <span
+                                                    class="mt-1 flex items-center text-sm text-gray-500"
+                                                    >Cabinets & Joinery</span
+                                                >
+                                            </span>
+                                        </span>
+                                        <CheckCircle
+                                            class="h-5 w-5 text-blue-600 invisible peer-checked:visible"
+                                        />
+                                        <span
+                                            class="pointer-events-none absolute -inset-px rounded-lg border-2 border-transparent peer-checked:border-blue-600"
+                                            aria-hidden="true"></span>
+                                    </label>
+
+                                    <label
+                                        class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none hover:border-blue-500 peer-checked:border-blue-600 peer-checked:ring-1 peer-checked:ring-blue-600"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="project-type"
+                                            value="interior"
+                                            class="sr-only peer"
+                                        />
+                                        <span class="flex flex-1">
+                                            <span class="flex flex-col">
+                                                <span
+                                                    class="block text-sm font-medium text-gray-900"
+                                                    >Interior Decorating</span
+                                                >
+                                                <span
+                                                    class="mt-1 flex items-center text-sm text-gray-500"
+                                                    >Walls, Ceilings, Woodwork</span
+                                                >
+                                            </span>
+                                        </span>
+                                        <CheckCircle
+                                            class="h-5 w-5 text-blue-600 invisible peer-checked:visible"
+                                        />
+                                        <span
+                                            class="pointer-events-none absolute -inset-px rounded-lg border-2 border-transparent peer-checked:border-blue-600"
+                                            aria-hidden="true"></span>
+                                    </label>
+
+                                    <label
+                                        class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none hover:border-blue-500 peer-checked:border-blue-600 peer-checked:ring-1 peer-checked:ring-blue-600"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="project-type"
+                                            value="heritage"
+                                            class="sr-only peer"
+                                        />
+                                        <span class="flex flex-1">
+                                            <span class="flex flex-col">
+                                                <span
+                                                    class="block text-sm font-medium text-gray-900"
+                                                    >Heritage Restoration</span
+                                                >
+                                                <span
+                                                    class="mt-1 flex items-center text-sm text-gray-500"
+                                                    >Sash Windows, Cornices</span
+                                                >
+                                            </span>
+                                        </span>
+                                        <CheckCircle
+                                            class="h-5 w-5 text-blue-600 invisible peer-checked:visible"
+                                        />
+                                        <span
+                                            class="pointer-events-none absolute -inset-px rounded-lg border-2 border-transparent peer-checked:border-blue-600"
+                                            aria-hidden="true"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-span-full">
+                                <label
+                                    for="about"
+                                    class="block text-sm font-medium leading-6 text-gray-900"
+                                    >Additional Details</label
+                                >
+                                <div class="mt-2">
+                                    <textarea
+                                        id="about"
+                                        name="about"
+                                        rows="3"
+                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                                        placeholder="e.g. 3 bedrooms, high ceilings, need wallpaper stripping..."
+                                    ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-900/10 pb-12">
+                        <h2
+                            class="text-base font-semibold leading-7 text-gray-900"
+                        >
+                            Contact Information
+                        </h2>
+                        <div
+                            class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6"
+                        >
+                            <div class="sm:col-span-3">
+                                <label
+                                    for="first-name"
+                                    class="block text-sm font-medium leading-6 text-gray-900"
+                                    >First name</label
+                                >
+                                <div class="mt-2">
+                                    <input
+                                        type="text"
+                                        name="first-name"
+                                        id="first-name"
+                                        autocomplete="given-name"
+                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                                    />
+                                </div>
+                            </div>
+                            <div class="sm:col-span-3">
+                                <label
+                                    for="last-name"
+                                    class="block text-sm font-medium leading-6 text-gray-900"
+                                    >Last name</label
+                                >
+                                <div class="mt-2">
+                                    <input
+                                        type="text"
+                                        name="last-name"
+                                        id="last-name"
+                                        autocomplete="family-name"
+                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                                    />
+                                </div>
+                            </div>
+                            <div class="sm:col-span-4">
+                                <label
+                                    for="email"
+                                    class="block text-sm font-medium leading-6 text-gray-900"
+                                    >Email address</label
+                                >
+                                <div class="mt-2">
+                                    <input
+                                        id="email"
+                                        name="email"
+                                        type="email"
+                                        autocomplete="email"
+                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-end gap-x-6">
+                        <button
+                            type="button"
+                            class="text-sm font-semibold leading-6 text-gray-900"
+                            >Cancel</button
+                        >
+                        <button
+                            type="submit"
+                            class="rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all"
+                            >Request Quote</button
+                        >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</Layout>

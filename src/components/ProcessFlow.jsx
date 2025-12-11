@@ -1,55 +1,44 @@
 import React from 'react';
-import { Phone, ClipboardCheck, Wrench, ThumbsUp } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
-const steps = [
-    {
-        title: 'Consultation',
-        desc: 'We discuss your needs and assess the work required.',
-        icon: Phone,
-    },
-    {
-        title: 'Fixed Quote',
-        desc: 'You get a clear, detailed price. No hidden fees.',
-        icon: ClipboardCheck,
-    },
-    {
-        title: 'Execution',
-        desc: 'Our certified team completes the work to the highest standard.',
-        icon: Wrench,
-    },
-    {
-        title: 'Sign-Off',
-        desc: 'We inspect the work together to ensure you are 100% satisfied.',
-        icon: ThumbsUp,
-    },
-];
-
-const ProcessFlow = () => {
+const ProcessFlow = ({
+    title = "How It Works",
+    subtitle = "Simple Feature Process",
+    steps = [
+        { title: "Step 1", desc: "Description 1" },
+        { title: "Step 2", desc: "Description 2" },
+        { title: "Step 3", desc: "Description 3" },
+        { title: "Step 4", desc: "Description 4" }
+    ]
+}) => {
     return (
-        <div className="py-24 bg-white">
+        <section className="py-24 bg-purple-900 text-white">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl text-center mb-16">
-                    <h2 className="text-base font-semibold leading-7 text-accent">Our Process</h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Simple, Stress-Free Service
+                    <h2 className="text-3xl font-header font-bold tracking-tight sm:text-4xl">
+                        {title}
+                    </h2>
+                    <p className="mt-4 text-lg leading-8 text-purple-200">
+                        {subtitle}
                     </p>
                 </div>
 
-                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
-                    {steps.map((step, stepIdx) => (
-                        <div key={step.title} class="relative">
-                            <div class="flex flex-col items-center text-center">
-                                <div class="flex h-16 w-16 items-center justify-center rounded-full bg-accent text-white shadow-lg mb-6">
-                                    <step.icon size={32} />
-                                </div>
-                                <h3 class="text-lg font-bold leading-8 text-gray-900">{step.title}</h3>
-                                <p class="mt-2 text-base leading-7 text-gray-500">{step.desc}</p>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                    {/* Connecting Line (Desktop) */}
+                    <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-purple-700 z-0"></div>
+
+                    {steps.map((step, index) => (
+                        <div key={index} className="relative z-10 flex flex-col items-center text-center">
+                            <div className="w-16 h-16 rounded-full bg-purple-600 border-4 border-purple-800 flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">
+                                {index + 1}
                             </div>
+                            <h3 className="text-xl font-bold mb-2 text-purple-100">{step.title}</h3>
+                            <p className="text-purple-300 text-sm">{step.desc}</p>
                         </div>
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

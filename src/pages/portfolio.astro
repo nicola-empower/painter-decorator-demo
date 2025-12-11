@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const projects = [
+    {
+        title: "Gosforth Victorian Townhouse",
+        category: "Full Restoration",
+        image: "/hero.png",
+        desc: "Complete redecoration of a 4-storey period property, including sash window restoration and intricate cornice work.",
+    },
+    {
+        title: "Bespoke Navy Kitchen",
+        category: "Kitchen Spraying",
+        image: "/hero.png",
+        desc: "Transforming dated oak units into a modern masterpiece with Farrow & Ball 'Hague Blue' in a satin finish.",
+    },
+    {
+        title: "Jesmond Apartment",
+        category: "Interior Design",
+        image: "/hero.png",
+        desc: "A contemporary minimal aesthetic using specialized clay paints for a soft, matte texture.",
+    },
+    {
+        title: "Commercial Office Refit",
+        category: "Commercial",
+        image: "/hero.png",
+        desc: "Out-of-hours spraying of suspended ceilings and partition walls for a fresh, modern look.",
+    },
+    {
+        title: "Luxury Wallpaper Feature",
+        category: "Wallpapering",
+        image: "/hero.png",
+        desc: "Installation of wide-width metallic wallpaper in a master bedroom suite.",
+    },
+    {
+        title: "Exterior Masonry Refresh",
+        category: "Exterior",
+        image: "/hero.png",
+        desc: "Weather-resistant coating applied to render and stonework for long-lasting protection.",
+    },
+];
+---
+
+<Layout title="Portfolio | Chroma Decor">
+    <main class="bg-gray-50">
+        <!-- Hero -->
+        <div
+            class="relative isolate overflow-hidden bg-white py-24 sm:py-32 border-b border-gray-200"
+        >
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:mx-0">
+                    <p
+                        class="text-blue-600 font-semibold uppercase tracking-wide"
+                    >
+                        Our Work
+                    </p>
+                    <h1
+                        class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl font-serif"
+                    >
+                        A Portfolio of Perfection
+                    </h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">
+                        Browse our gallery of recent projects. From kitchen
+                        transformations to heritage restorations, every detail
+                        matters.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div
+                    class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+                >
+                    {
+                        projects.map((project) => (
+                            <article class="flex flex-col items-start justify-between group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                                <div class="relative w-full overflow-hidden">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        class="aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2] group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div class="absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
+                                </div>
+                                <div class="max-w-xl p-8">
+                                    <div class="flex items-center gap-x-4 text-xs">
+                                        <span class="relative z-10 rounded-full bg-blue-50 px-3 py-1.5 font-medium text-blue-700 hover:bg-blue-100">
+                                            {project.category}
+                                        </span>
+                                    </div>
+                                    <div class="group relative">
+                                        <h3 class="mt-3 text-xl font-semibold leading-6 text-gray-900 group-hover:text-blue-600 font-serif">
+                                            <a href="#">
+                                                <span class="absolute inset-0" />
+                                                {project.title}
+                                            </a>
+                                        </h3>
+                                        <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                                            {project.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

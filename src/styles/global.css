@@ -1,23 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Outfit', sans-serif;
-  --color-primary: #1e293b;
-  /* Slate 800 */
-  --color-secondary: #475569;
-  /* Slate 600 */
-  --color-accent: #db2777;
-  /* Pink 600 - Creative/Vibrant */
-  --color-paint: #0ea5e9;
-  /* Sky 500 - Fresh Coat */
+  --font-header: "Playfair Display", serif;
+  --font-body: "Lato", sans-serif;
+
+  --color-accent: #7e22ce;
+  /* purple-700 */
+  --color-accent-hover: #6b21a8;
+  /* purple-800 */
+
+  --radius-button: 0.75rem;
+  /* rounded-xl */
 }
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
+@layer utilities {
+  .font-header {
+    font-family: var(--font-header);
   }
 
-  body {
-    @apply bg-white text-primary antialiased selection:bg-accent/20 selection:text-white;
+  .font-body {
+    font-family: var(--font-body);
   }
+}
+
+/* Painter Base Styles (Boutique) */
+body {
+  background-color: #faf5ff;
+  /* purple-50 */
+  color: #4c1d95;
+  /* violet-900 */
 }
