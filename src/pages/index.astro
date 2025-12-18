@@ -4,6 +4,7 @@ import TrustBar from "../components/TrustBar.jsx";
 import Testimonials from "../components/Testimonials.jsx";
 import FAQ from "../components/FAQ.jsx";
 import FeatureSection from "../components/FeatureSection.jsx";
+import ServiceAreaMap from "../components/ServiceAreaMap.jsx";
 import ProcessFlow from "../components/ProcessFlow.jsx";
 import {
 	Brush,
@@ -228,6 +229,32 @@ const serviceFeatures = [
 					rounded-2xl shadow-xl ring-1 ring-gray-900/10 object-cover
 					aspect-video" />
 				</div>
+			</div>
+		</div>
+
+		<!-- Service Area Map Section -->
+		<div class="py-24 bg-white">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-2xl text-center mb-16">
+					<h2 class="text-base font-semibold leading-7 text-accent">
+						Local Coverage
+					</h2>
+					<p
+						class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+					>
+						Serving The North East
+					</p>
+					<p class="mt-4 text-lg text-gray-500">
+						Providing expert painting and decorating services across
+						Newcastle, Gateshead, and Sunderland.
+					</p>
+				</div>
+				<ServiceAreaMap
+					client:only="react"
+					center={[54.9783, -1.6178]}
+					city="Newcastle upon Tyne"
+					radiusMiles={15}
+				/>
 			</div>
 		</div>
 
