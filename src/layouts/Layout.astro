@@ -21,7 +21,7 @@ const {
     city = "London",
     areas = ["Chelsea", "Kensington", "Fulham", "Notting Hill", "Mayfair"],
     postcodes = ["SW3", "SW7", "SW6", "W11", "W1"],
-    phone = "020 7900 1234",
+    phone = "0191 496 0000",
 } = Astro.props;
 ---
 
@@ -45,7 +45,11 @@ const {
     <body
         class="min-h-screen flex flex-col overflow-x-hidden font-body selection:bg-accent selection:text-white"
     >
-    <a href="https://empowerdigitalsolutions.co.uk/trades" class="fixed top-4 left-4 z-[9999] bg-black/80 text-white px-3 py-1 rounded-full text-xs font-medium hover:bg-black transition-all border border-white/20 shadow-lg no-underline backdrop-blur-sm">&larr; Back</a>
+        <a
+            href="https://empowerdigitalsolutions.co.uk/trades"
+            class="fixed top-4 left-4 z-[9999] bg-black/80 text-white px-3 py-1 rounded-full text-xs font-medium hover:bg-black transition-all border border-white/20 shadow-lg no-underline backdrop-blur-sm"
+            >&larr; Back</a
+        >
         <!-- Sticky Header (Desktop) -->
         <Header client:load title={title.split(" - ")[0]} phone={phone} />
 
@@ -67,7 +71,13 @@ const {
             >
                 <div class="text-sm text-gray-400">
                     &copy; {new Date().getFullYear()}
-                    {title}. All rights reserved. <span class="mx-2 opacity-50">|</span> <a href="https://empowerdigitalsolutions.co.uk/trades" class="hover:text-white transition-colors">Back</a>
+                    {title}. All rights reserved. <span class="mx-2 opacity-50"
+                        >|</span
+                    >
+                    <a
+                        href="https://empowerdigitalsolutions.co.uk/trades"
+                        class="hover:text-white transition-colors">Back</a
+                    >
                 </div>
                 <div class="flex gap-6">
                     <a
@@ -100,4 +110,3 @@ const {
         </footer>
     </body>
 </html>
-
